@@ -45,10 +45,10 @@ public class receipt extends javax.swing.JFrame {
         int token20 = token.nextInt(10);
         jLabel13.setText(""+token1+token2+token3+token4+" "+token5+token6+token7+token8+" "+token9+token10+token11+token12+" "+token13+token14+token15+token16+" "+token17+token18+token19+token20);
         jLabel8.setText("Rp."+priceitem);
-        jLabel9.setText(usernames);
-        jLabel10.setText(balances);
-        jLabel11.setText("Token");
-        jLabel12.setText(nomors);     
+        jLabel9.setText(balances);
+        jLabel10.setText("Token");
+        jLabel11.setText(nomors);
+        jLabel12.setText(emails);     
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
