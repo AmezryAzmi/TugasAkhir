@@ -9,7 +9,7 @@ public class receipt2 extends javax.swing.JFrame {
     public receipt2() {
         initComponents();
     }
-    public receipt2(String email, String username, String balance, String invoice, String nomor){
+    public receipt2(String email, String username, String balance, String invoice, String nomor, Integer priceitem){
         initComponents();
         emails = email;
         usernames = username;
@@ -17,7 +17,7 @@ public class receipt2 extends javax.swing.JFrame {
         invoices = invoice;
         nomors = nomor;
         jLabel7.setText(emails);
-        jLabel8.setText(usernames);
+        jLabel8.setText("Rp."+priceitem);
         jLabel9.setText(balances);
         jLabel10.setText("Invoice");
         jLabel11.setText(nomors);     
@@ -45,10 +45,8 @@ public class receipt2 extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 255, 255));
 
-        jLabel10.setForeground(new java.awt.Color(0, 153, 153));
         jLabel10.setText("jLabel10");
 
-        jLabel11.setForeground(new java.awt.Color(0, 153, 153));
         jLabel11.setText("jLabel11");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -63,7 +61,6 @@ public class receipt2 extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 153, 153));
         jLabel2.setText("Email");
 
         jButton2.setBackground(new java.awt.Color(0, 153, 153));
@@ -75,28 +72,21 @@ public class receipt2 extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 153, 153));
         jLabel3.setText("Price");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 153, 153));
         jLabel4.setText("Balance");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 153, 153));
         jLabel5.setText("Electricity Type");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 153, 153));
         jLabel6.setText("Serial Number");
 
-        jLabel7.setForeground(new java.awt.Color(0, 153, 153));
         jLabel7.setText("jLabel7");
 
-        jLabel8.setForeground(new java.awt.Color(0, 153, 153));
         jLabel8.setText("jLabel8");
 
-        jLabel9.setForeground(new java.awt.Color(0, 153, 153));
         jLabel9.setText("jLabel9");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

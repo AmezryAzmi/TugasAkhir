@@ -90,7 +90,6 @@ public class E_Bill extends javax.swing.JFrame {
         jLabel7.setText("jLabel7");
 
         jLabel1.setBackground(new java.awt.Color(255, 51, 0));
-        jLabel1.setForeground(new java.awt.Color(0, 153, 153));
         jLabel1.setText("Electricity Product Type");
 
         jComboBox1.setBackground(new java.awt.Color(0, 153, 153));
@@ -107,16 +106,13 @@ public class E_Bill extends javax.swing.JFrame {
         });
 
         jLabel2.setBackground(new java.awt.Color(255, 51, 0));
-        jLabel2.setForeground(new java.awt.Color(0, 153, 153));
         jLabel2.setText("Serial Number/ Costumer Id");
 
         jTextField1.setBackground(new java.awt.Color(0, 153, 153));
 
         jLabel3.setBackground(new java.awt.Color(255, 51, 0));
-        jLabel3.setForeground(new java.awt.Color(0, 153, 153));
         jLabel3.setText("Nominal");
 
-        jLabel10.setForeground(new java.awt.Color(0, 153, 153));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("jLabel10");
 
@@ -147,22 +143,18 @@ public class E_Bill extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setForeground(new java.awt.Color(0, 153, 153));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("jLabel11");
 
         jLabel8.setBackground(new java.awt.Color(255, 51, 0));
-        jLabel8.setForeground(new java.awt.Color(0, 153, 153));
         jLabel8.setText("Rp.");
 
         jLabel4.setBackground(new java.awt.Color(255, 51, 0));
-        jLabel4.setForeground(new java.awt.Color(0, 153, 153));
         jLabel4.setText("Your Invoice : ");
         jLabel4.setMaximumSize(new java.awt.Dimension(109, 22));
         jLabel4.setMinimumSize(new java.awt.Dimension(109, 22));
 
         jLabel6.setBackground(new java.awt.Color(255, 51, 0));
-        jLabel6.setForeground(new java.awt.Color(0, 153, 153));
         jLabel6.setText("jLabel6");
 
         jButton5.setBackground(new java.awt.Color(0, 153, 153));
@@ -185,15 +177,6 @@ public class E_Bill extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addComponent(jButton5)
-                .addGap(217, 217, 217))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(167, 167, 167)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(160, 160, 160))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(121, 121, 121)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -232,6 +215,17 @@ public class E_Bill extends javax.swing.JFrame {
                                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(167, 167, 167)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton5)
+                        .addGap(217, 217, 217))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(160, 160, 160))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -400,13 +394,14 @@ public class E_Bill extends javax.swing.JFrame {
                 jButton3.setVisible(true);
                 jButton4.setVisible(true);
                 jButton5.setVisible(true);  
+                jLabel8.setVisible(true);
             }else{
                 jLabel6.setVisible(false);
                 jLabel4.setVisible(true);
                 jLabel4.setText("Your Serial Numbers Wrong");
                 jButton2.setVisible(false);
                 jLabel7.setVisible(true);
-                jLabel8.setVisible(false);
+                jLabel8.setVisible(true);
                 jLabel10.setVisible(false);
                 jLabel11.setVisible(false);
                 jButton3.setVisible(false);
@@ -429,11 +424,11 @@ public class E_Bill extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         int balancee;
         balancee = Integer.parseInt(balances);
-        if (i == 1){
+        if (jButton1.getText().equals("Checkout")){
             if (balancee >= priceitem){
                 balancee = balancee - priceitem;
                 balances = Integer.toString(balancee);
-                new receipt(emails, usernames, balances, invoices, nomors).setVisible(true);
+                new receipt(emails, usernames, balances, invoices, nomors, priceitem).setVisible(true);
                 this.setVisible(false);
             }else{
                 jLabel10.setText("Sorry, Insufficient Balance");
@@ -443,7 +438,7 @@ public class E_Bill extends javax.swing.JFrame {
             if (balancee >= priceitem){
                 balancee = balancee - priceitem;
                 balances = Integer.toString(balancee);
-                new receipt2(emails, usernames, balances, invoices, nomors).setVisible(true);
+                new receipt2(emails, usernames, balances, invoices, nomors, priceitem).setVisible(true);
                 this.setVisible(false);
             }else{
                 jLabel10.setText("Sorry, Insufficient Balance");

@@ -15,7 +15,7 @@ public class receipt extends javax.swing.JFrame {
     public receipt() {
         initComponents();
     }
-    public receipt(String email, String username, String balance, String invoice, String nomor){
+    public receipt(String email, String username, String balance, String invoice, String nomor, Integer priceitem){
         initComponents();
         emails = email;
         usernames = username;
@@ -44,7 +44,7 @@ public class receipt extends javax.swing.JFrame {
         int token19 = token.nextInt(10);
         int token20 = token.nextInt(10);
         jLabel13.setText(""+token1+token2+token3+token4+" "+token5+token6+token7+token8+" "+token9+token10+token11+token12+" "+token13+token14+token15+token16+" "+token17+token18+token19+token20);
-        jLabel8.setText(emails);
+        jLabel8.setText("Rp."+priceitem);
         jLabel9.setText(usernames);
         jLabel10.setText(balances);
         jLabel11.setText("Token");
@@ -79,42 +79,31 @@ public class receipt extends javax.swing.JFrame {
         jLabel1.setText("Receipt");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 153, 153));
         jLabel4.setText("Balance");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 153, 153));
         jLabel5.setText("Electrity Type");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 153, 153));
         jLabel6.setText("Serial Number");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 153, 153));
         jLabel7.setText("Token");
 
-        jLabel8.setForeground(new java.awt.Color(0, 153, 153));
         jLabel8.setText("jLabel8");
 
-        jLabel9.setForeground(new java.awt.Color(0, 153, 153));
         jLabel9.setText("jLabel9");
 
-        jLabel10.setForeground(new java.awt.Color(0, 153, 153));
         jLabel10.setText("jLabel10");
 
-        jLabel11.setForeground(new java.awt.Color(0, 153, 153));
         jLabel11.setText("jLabel11");
 
-        jLabel12.setForeground(new java.awt.Color(0, 153, 153));
         jLabel12.setText("jLabel12");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 153, 153));
         jLabel2.setText("Email");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 153, 153));
         jLabel3.setText("Price");
 
         jButton2.setBackground(new java.awt.Color(0, 153, 153));
@@ -127,7 +116,6 @@ public class receipt extends javax.swing.JFrame {
         });
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 153, 153));
         jLabel13.setText("jLabel13");
 
         jButton1.setBackground(new java.awt.Color(0, 153, 153));

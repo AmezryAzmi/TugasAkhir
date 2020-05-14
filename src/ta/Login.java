@@ -120,7 +120,6 @@ public class Login extends javax.swing.JFrame {
 
         jLabel4.setBackground(new java.awt.Color(0, 255, 255));
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 153, 153));
         jLabel4.setText("Email");
 
         Username.setBackground(new java.awt.Color(0, 153, 153));
@@ -152,7 +151,6 @@ public class Login extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(51, 255, 255));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 153, 153));
         jLabel3.setText("Password");
 
         Password.setBackground(new java.awt.Color(0, 153, 153));

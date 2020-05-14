@@ -67,15 +67,12 @@ public class Bayar extends javax.swing.JFrame {
         jLabel1.setFocusable(false);
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel5.setForeground(new java.awt.Color(0, 153, 153));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("jLabel5");
 
-        jLabel6.setForeground(new java.awt.Color(0, 153, 153));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("jLabel6");
 
-        jLabel7.setForeground(new java.awt.Color(0, 153, 153));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("jLabel7");
 
@@ -88,17 +85,13 @@ public class Bayar extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setForeground(new java.awt.Color(0, 153, 153));
         jLabel8.setText("Amount To Top Up  :");
 
         jLabel2.setBackground(new java.awt.Color(255, 51, 0));
-        jLabel2.setForeground(new java.awt.Color(0, 153, 153));
         jLabel2.setText("Username              :");
 
-        jLabel3.setForeground(new java.awt.Color(0, 153, 153));
         jLabel3.setText("Email                     :");
 
-        jLabel4.setForeground(new java.awt.Color(0, 153, 153));
         jLabel4.setText("Balance                  :");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
