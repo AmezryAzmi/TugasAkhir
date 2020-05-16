@@ -114,7 +114,7 @@ public class E_Bill extends javax.swing.JFrame {
         jLabel3.setText("Nominal");
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("jLabel10");
+        jLabel10.setText("0");
 
         jButton3.setBackground(new java.awt.Color(0, 153, 153));
         jButton3.setText("Checkout");
@@ -144,7 +144,7 @@ public class E_Bill extends javax.swing.JFrame {
         });
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("jLabel11");
+        jLabel11.setText("0");
 
         jLabel8.setBackground(new java.awt.Color(255, 51, 0));
         jLabel8.setText("Rp.");
@@ -155,7 +155,7 @@ public class E_Bill extends javax.swing.JFrame {
         jLabel4.setMinimumSize(new java.awt.Dimension(109, 22));
 
         jLabel6.setBackground(new java.awt.Color(255, 51, 0));
-        jLabel6.setText("jLabel6");
+        jLabel6.setText("0");
 
         jButton5.setBackground(new java.awt.Color(0, 153, 153));
         jButton5.setText("Account Info");
@@ -436,6 +436,7 @@ public class E_Bill extends javax.swing.JFrame {
             }
         }else {
             if (balancee >= priceitem){
+                invoices = "0";
                 balancee = balancee - priceitem;
                 balances = Integer.toString(balancee);
                 new receipt2(emails, usernames, balances, invoices, nomors, priceitem).setVisible(true);
